@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="digital_twin_lab-4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.78900440586769 -0.881080760642453 -0.1165449489918"
+        rpy="0 0 0" />
+      <mass
+        value="199.608158242893" />
+      <inertia
+        ixx="10.5666582157859"
+        ixy="1.27793035818756E-10"
+        ixz="2.8219698966173E-10"
+        iyy="42.9924156247688"
+        iyz="5.91605791087923E-11"
+        izz="52.3672725427773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="slide-rail">
+    <inertial>
+      <origin
+        xyz="-1.43995243789554 -0.866665161394356 -0.200928921167978"
+        rpy="0 0 0" />
+      <mass
+        value="9.10141973800343" />
+      <inertia
+        ixx="0.00462584403154433"
+        ixy="-2.47766910593191E-07"
+        ixz="2.22783567848481E-08"
+        iyy="7.2200527077908"
+        iyz="6.58677957713715E-06"
+        izz="7.22100259175683" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/slide-rail.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/slide-rail.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slide-rail-j"
+    type="fixed">
+    <origin
+      xyz="3.08771486040588 -0.0803389725836143 0.244946823793314"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="slide-rail" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="slide">
+    <inertial>
+      <origin
+        xyz="0.0726026016397733 0.00430886913851669 0.0405868162079005"
+        rpy="0 0 0" />
+      <mass
+        value="0.419983323514114" />
+      <inertia
+        ixx="0.000608866562581119"
+        ixy="2.9612249255929E-10"
+        ixz="1.13485370520592E-09"
+        iyy="0.000510747138587582"
+        iyz="-1.16613327497699E-06"
+        izz="0.00103925065608287" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/slide.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/slide.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slide-j"
+    type="prismatic">
+    <origin
+      xyz="0.0816343147052204 -0.941639598555333 0.0334470853841981"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="slide" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.5"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm-base">
+    <inertial>
+      <origin
+        xyz="0.000205373054773333 -0.000243961116325409 0.0213915629117625"
+        rpy="0 0 0" />
+      <mass
+        value="0.722677101161878" />
+      <inertia
+        ixx="0.000757508587612383"
+        ixy="1.73072500581096E-06"
+        ixz="3.13488589429113E-07"
+        iyy="0.00100766511534247"
+        iyz="-3.27512905316407E-07"
+        izz="0.00170957147679652" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/arm-base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/arm-base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm-base-j"
+    type="fixed">
+    <origin
+      xyz="0.0725270285681471 0.00413959636703953 0.0557629137973782"
+      rpy="0 0 0" />
+    <parent
+      link="slide" />
+    <child
+      link="arm-base" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="squid">
+    <inertial>
+      <origin
+        xyz="-0.145539076490268 -1.09899662017959 0.107670525984125"
+        rpy="0 0 0" />
+      <mass
+        value="3.63619504672604" />
+      <inertia
+        ixx="0.0528314659485866"
+        ixy="0.0002828926831766"
+        ixz="3.98656771778692E-06"
+        iyy="0.0195251698514204"
+        iyz="6.61872461978163E-07"
+        izz="0.0673167761503225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/squid.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/squid.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="squid-j"
+    type="fixed">
+    <origin
+      xyz="0.372639557589471 -0.359158562952015 0.00929027600838317"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="squid" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="incubator">
+    <inertial>
+      <origin
+        xyz="0.14856747493369 0.182353009501485 0.299375603156406"
+        rpy="0 0 0" />
+      <mass
+        value="4.15140484031969" />
+      <inertia
+        ixx="0.0412959434046889"
+        ixy="-2.87903526561391E-05"
+        ixz="-2.28349994456601E-06"
+        iyy="0.0392968101240738"
+        iyz="-9.74814592294174E-05"
+        izz="0.0175131319455678" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/incubator.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/incubator.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="incubator-j"
+    type="fixed">
+    <origin
+      xyz="0.720988669677961 -0.517519961048278 0.0161152356721954"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="incubator" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="1">
+    <inertial>
+      <origin
+        xyz="4.59589526852766E-05 7.0532832383785E-05 0.00753805993131673"
+        rpy="0 0 0" />
+      <mass
+        value="0.0868244944825262" />
+      <inertia
+        ixx="0.000126271352614738"
+        ixy="2.40742980190978E-07"
+        ixz="-8.29625367427881E-09"
+        iyy="5.64144498466677E-05"
+        iyz="-1.27388068981493E-08"
+        izz="0.000180549328693109" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1j"
+    type="fixed">
+    <origin
+      xyz="0.186938148871609 -1.54609976894629 0.302906827198127"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="2">
+    <inertial>
+      <origin
+        xyz="4.59589526854431E-05 7.05328323838406E-05 0.00753805993131676"
+        rpy="0 0 0" />
+      <mass
+        value="0.0868244944825264" />
+      <inertia
+        ixx="0.000126271352614737"
+        ixy="2.40742980190993E-07"
+        ixz="-8.29625367428794E-09"
+        iyy="5.64144498466677E-05"
+        iyz="-1.27388068981641E-08"
+        izz="0.000180549328693109" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2j"
+    type="fixed">
+    <origin
+      xyz="0.813073148349912 -0.375034358450601 0.100266923263157"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="3">
+    <inertial>
+      <origin
+        xyz="4.59589526853321E-05 7.05328323838961E-05 0.00753805993131677"
+        rpy="0 0 0" />
+      <mass
+        value="0.0868244944825265" />
+      <inertia
+        ixx="0.000126271352614737"
+        ixy="2.40742980191003E-07"
+        ixz="-8.29625367427687E-09"
+        iyy="5.64144498466678E-05"
+        iyz="-1.27388068981656E-08"
+        izz="0.000180549328693109" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://digital_twin_lab-4/meshes/3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3j"
+    type="fixed">
+    <origin
+      xyz="0.922439977066649 -0.375034358450601 0.100266923263157"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
