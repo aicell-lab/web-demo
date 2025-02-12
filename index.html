@@ -1,30 +1,31 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Micro Farm Demo</title>
-    <script type="module" crossorigin src="./assets/index-BLESiXQc.js"></script>
-  </head>
 
-  <style>
-    /* Ensures the body and html occupy the full viewport without scrollbars */
-    body, html {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro Farm Demo</title>
+  <script type="module" crossorigin src="./assets/index-CRhdzehA.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Czn8aeCN.css">
+</head>
 
-    /* Makes the Three.js canvas fit the entire window */
-    canvas {
-      display: block; /* Removes inline spacing */
-      position: fixed; /* Sticks to the viewport */
-      top: 0;
-      left: 0;
-    }
-  </style>
+<body>
+  <div id="app"></div>
 
-  <body>
-    <div id="app"></div>
-  </body>
+  <div id="ui">
+    <h2>Controls</h2>
+    <p><strong>W A S D</strong> - Move</p>
+    <p><strong>Q / E</strong> - Rotate</p>
+    <p><strong>H</strong> - Hide/Show</p>
+  </div>
+
+  <div id="ui-buttons">
+    <h2>Arm Commands</h2>
+    <button class="ui-button" id="btn1">Move To A</button>
+    <button class="ui-button" id="btn2">Move To B</button>
+    <button class="ui-button" id="btn3">STOP</button>
+  </div>
+
+</body>
+
 </html>
