@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Micro Farm Demo</title>
-  <script type="module" crossorigin src="./assets/index-B88cZMO2.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DELMiOTG.css">
+  <script type="module" crossorigin src="./assets/index-RdtFMeZx.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BXIJW9ex.css">
 </head>
 
 <body>
@@ -35,10 +35,20 @@
     <button class="ui-button" id="btn6">GOTO 6</button>
     <button class="ui-button" id="btn7">STOP</button>
   </div>
+
   <div id="sync-panel">
     <button class="ui-button" id="sync-button">SYNC</button>
     <button class="ui-button" id="sync-button-real">SYNC-REAL</button>
-  </div>  
+  </div>
+
+  <div id="physics-panel">
+    <label class="switch">
+      <input type="checkbox" id="physics-toggle-checkbox">
+      <span class="slider"></span>
+    </label>
+    <span class="label">Physics</span>
+  </div>
+
 
   <div id="hud" class="hidden">Click microscope to interact</div>
 
@@ -51,18 +61,14 @@
     <div id="dialog-body">
       <iframe src="https://example.com/"></iframe>
     </div>
-  </div> 
-
-
-  <div id="loading-screen">
-    <div class="spinner"></div>
-    <p>Loading...</p>
   </div>
+
 
   <div id="overlay">
     <div class="spinner"></div>
     <p>Loading...</p>
   </div>
+
 
 </body>
 
